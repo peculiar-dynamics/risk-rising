@@ -48,31 +48,30 @@ export type SiteInfo = {
 };
 
 const siteInfo: SiteInfo = {
-  name: "Astro", // business name SEO subtitle
-  title: "Build the web you want", // tagline
-  description:
-    "Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
-  url: "https://astro.build", // public domain without closing /
-  domain: "astro.build",
-  themeColor: "#8D46E7",
+  name: "Risk Rising", // business name SEO subtitle
+  title: "Simplify. Standardise. Optimise", // tagline
+  description: ".",
+  url: "https://riskrising.com", // public domain without closing /
+  domain: "riskrising.com",
+  themeColor: "#27AAE1",
   logo: "/assets/square-160.png",
   favicon: "/assets/favicon.svg",
   twitterHandle: "astrodotbuild",
   email: {
-    defaultContact: "hello@email.com",
+    defaultContact: "Bobby@riskrising.com",
     defaultSubject: "Website Enquiry",
   },
   business: {
     legalName: "Business Ltd",
-    companiesReg: "123456789",
-    VATReg: "123456",
-    regAddress: "221c Baker Street, London, NW1 6XE",
-    tradingAddress: "42 Wallaby Way, Sydney",
+    companiesReg: "1421814",
+    VATReg: "420156932",
+    regAddress: "3A Bencliffe Avenue, Leeds, LS17 6QJ",
+    tradingAddress: "3A Bencliffe Avenue, Leeds, LS17 6QJ",
     phone: "01234 567 890",
   },
   image: {
     src: "/assets/full-250x150.png",
-    alt: "Risk Rising - simplify, standardise, optimise",
+    alt: "Risk Rising - simplify, standardise, optimise.",
   },
   socialLinks: [
     {

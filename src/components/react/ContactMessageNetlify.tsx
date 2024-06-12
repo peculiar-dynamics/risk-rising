@@ -62,7 +62,7 @@ export default function ContactMessageNetlify() {
       id="contactForm"
       name="contactForm"
       onSubmit={handleSubmit(onSubmit)}
-      className="relative flex w-full flex-col items-center justify-center gap-4"
+      className="relative flex w-full flex-col items-center justify-center gap-4 "
       data-netlify="true"
       netlify-honeypot="bot-field"
       method="POST"
@@ -76,7 +76,7 @@ export default function ContactMessageNetlify() {
       {isSubmitSuccessful && (
         <div
           id="success-message"
-          className="absolute z-20 flex h-full w-full flex-col items-center justify-center rounded-md bg-[--surface-container-low] p-4 text-center shadow-md"
+          className="absolute z-20 flex h-full w-full flex-col items-center justify-center rounded-md bg-[--surfaceContainerLow] p-4 text-center shadow-md"
         >
           <Icon
             icon="mdi:success-circle-outline"
@@ -99,10 +99,8 @@ export default function ContactMessageNetlify() {
           </button>
         </div>
       )}
-      <div className="flex w-full flex-col gap-1">
-        <label htmlFor="contact-name" className="sr-only">
-          Full Name
-        </label>
+      <div className="text-input group flex w-full flex-col gap-1">
+        <label htmlFor="contact-name">Full Name</label>
         <input
           {...register("name", {
             required: "Your Name is required",
@@ -114,7 +112,7 @@ export default function ContactMessageNetlify() {
           })}
           aria-invalid={errors.name ? "true" : "false"}
           placeholder={"Full Name"}
-          className="w-full rounded-md border-2 px-4  py-3 outline-none "
+          className="w-full  px-4   py-3  "
           autoComplete="name"
           disabled={isSubmitting || isSubmitSuccessful}
           id="contact-name"
@@ -214,7 +212,7 @@ export default function ContactMessageNetlify() {
             Message Sent
           </span>
         ) : (
-          <span className="btnSubmit-text button filled inline-flex py-2 px-6 items-center justify-center rounded-sm gap-2">
+          <span className="btnSubmit-text button tonal inline-flex py-2 px-6 items-center justify-center rounded-sm gap-2">
             Send Message
           </span>
         )}
@@ -225,9 +223,9 @@ export default function ContactMessageNetlify() {
         ></span>
       </button>
 
-      <div className="inline-flex w-full flex-wrap items-center justify-center gap-1 whitespace-nowrap text-center text-xs text-[--onSurfaceVariant] sm:text-left">
+      <div className="inline-flex w-full flex-wrap items-center justify-center gap-1 whitespace-nowrap text-center text-xs text-[--onPrimaryVariant] sm:text-left">
         Check out our
-        <a href="/policies/privacy" className=" text-[--tertiary] underline">
+        <a href="/policies/privacy" className=" text-[--onPrimary] underline">
           Privacy Policy
         </a>
         for how we use your data.
