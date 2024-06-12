@@ -59,7 +59,7 @@
   h2,
   h3,
   h4 {
-    @apply mb-1 md:mb-2 text-pretty;
+    @apply mb-1 md:mb-2 text-pretty font-title text-[--primary];
   }
 
   h1 {
@@ -137,6 +137,10 @@
   }
   .primaryFill {
     @apply bg-[--primary] text-[--onPrimary];
+  }
+  .feature.primaryFill > h2,
+  .feature.primaryFill > .text-btn {
+    @apply text-[--onPrimary];
   }
 
   .primaryContainer {

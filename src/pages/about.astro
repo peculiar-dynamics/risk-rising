@@ -20,7 +20,7 @@ const partners = content.partners.slice(0,3)
     <PageHeader {title} gradient/>
     <CallOut title="Our mission">
         <Fragment slot="content" >
-            <p  class="font-semibold max-w-[40ch] capitalize text-xl md:text-2xl">
+            <p  class="font-semibold max-w-[40ch] capitalize text-xl md:text-2xl text-[--onSurface]">
                 "DELIVER <strong>CLARITY</strong> ON COMPLEX GRC PROBLEMS TO OUR CUSTOMERS THROUGH AN ECOSYSTEM OF <strong>BEST-IN-CLASS TECHNOLOGY</strong> AND EXPERTISE"
             </p>
         </Fragment>
@@ -29,7 +29,7 @@ const partners = content.partners.slice(0,3)
 
     <ContentGallery subtitle="Our Team" title="Or Testimonials" items={content.about.team} gallery="cards"/>
 
-    <ContentSplit title="Building Relationships" subtitle="Our Partners" id="partners">
+    <ContentSplit title="Building Relationships" subtitle="Our Partners" id="partners" sectionbg="bg-[--primary] text-[--onPrimary]" titleColor="text-[--onPrimary]">
 		<Fragment slot="heading">
 			<p class=" md:text-left text-center" >
 				Navigating a fast-moving threat and regulatory landscape with a dynamic GRC programme is a challenge. 
@@ -42,7 +42,7 @@ const partners = content.partners.slice(0,3)
 		<Button
 		href="/services"
 		text="Partner Services"
-		type="filled"
+		type="tonal"
 		addClasses="w-fit"
 		slot="buttons"
 
@@ -51,7 +51,7 @@ const partners = content.partners.slice(0,3)
 		<div class="grid grid-rows-4 grid-flow-col gap-4">
             <span class="row-span-1" aria-hidden="true"></span>
 			{ partners.map((item) => (
-				<Card title={item.title} content={item.content} addClasses="row-span-2" outlined>
+				<Card title={item.title} content={item.content} image={item.image} addClasses="row-span-2" imageContain filled>
 					<p>{item.content}</p>
 				</Card>
 			))}

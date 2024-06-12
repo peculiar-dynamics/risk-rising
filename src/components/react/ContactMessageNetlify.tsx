@@ -89,7 +89,7 @@ export default function ContactMessageNetlify() {
             Your message has been received and we will get back to you ASAP.
           </p>
           <button
-            className="button tonal size-small w-fit"
+            className="button tonal  w-fit"
             type="reset"
             onClick={() => {
               reset();
@@ -185,13 +185,13 @@ export default function ContactMessageNetlify() {
 
       <button
         type="submit"
-        className="button w-fit"
+        className=" w-fit"
         aria-live="assertive"
         disabled={isSubmitting || isSubmitSuccessful}
       >
         {isSubmitting ? (
           <span
-            className="btnSubmit-text tonal inline-flex w-full items-center justify-center gap-2"
+            className="btnSubmit-text button tonal inline-flex w-full items-center justify-center gap-2"
             aria-label="Sending message, please wait..."
           >
             <svg
@@ -210,11 +210,11 @@ export default function ContactMessageNetlify() {
             Sending
           </span>
         ) : isSubmitSuccessful ? (
-          <span className="btnSubmit-text disabled inline-flex items-center justify-center py-2 px-6 rounded-sm gap-2">
+          <span className="btnSubmit-text button disabled inline-flex items-center justify-center py-2 px-6 rounded-sm gap-2">
             Message Sent
           </span>
         ) : (
-          <span className="btnSubmit-text filled inline-flex py-2 px-6 items-center justify-center rounded-sm gap-2">
+          <span className="btnSubmit-text button filled inline-flex py-2 px-6 items-center justify-center rounded-sm gap-2">
             Send Message
           </span>
         )}

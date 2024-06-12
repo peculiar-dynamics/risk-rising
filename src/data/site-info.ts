@@ -22,6 +22,7 @@ export type SiteInfo = {
   url: string;
   domain: string;
   themeColor: string;
+  logo: string;
   favicon: string;
   twitterHandle: string;
   email: {
@@ -54,6 +55,7 @@ const siteInfo: SiteInfo = {
   url: "https://astro.build", // public domain without closing /
   domain: "astro.build",
   themeColor: "#8D46E7",
+  logo: "/assets/square-160.png",
   favicon: "/assets/favicon.svg",
   twitterHandle: "astrodotbuild",
   email: {
@@ -69,8 +71,8 @@ const siteInfo: SiteInfo = {
     phone: "01234 567 890",
   },
   image: {
-    src: "/og/social.jpg",
-    alt: "Build the web you want",
+    src: "/assets/full-250x150.png",
+    alt: "Risk Rising - simplify, standardise, optimise",
   },
   socialLinks: [
     {

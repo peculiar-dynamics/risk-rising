@@ -38,6 +38,16 @@ export type Content = {
       newsFilters: Filter[];
     };
   };
+  hero: {
+    logo: string;
+    title: string;
+    subtitle?: string;
+    image?: {
+      src?: string;
+      alt?: string;
+    };
+    background: string;
+  };
   partners: Partner[];
   services: Feature[];
   blogs: Card[];
@@ -81,32 +91,41 @@ const content: Content = {
       ],
     },
   },
+  hero: {
+    logo: "/src/assets/square-light-160.png",
+    title: "Simplify.<br>Standardise.<br>Optimise.",
+    image: {
+      src: "/src/assets/smoke.jpg",
+      alt: "",
+    },
+    background: "gradient",
+  },
   partners: [
     {
-      title: "partner 1",
-      image: "/src/assets/350x100.svg",
+      title: "NTT",
+      image: "/src/assets/ntt.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit.",
     },
     {
-      title: "partner 1",
-      image: "/src/assets/350x100.svg",
+      title: "Panorays",
+      image: "/src/assets/panorays.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit.",
     },
     {
-      title: "partner 1",
-      image: "/src/assets/350x100.svg",
+      title: "Logicgate",
+      image: "/src/assets/logicgate.png",
       content:
         "Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit.",
     },
     {
-      title: "partner 1",
-      image: "/src/assets/350x100.svg",
+      title: "Core to Cloud",
+      image: "/src/assets/core-to-cloud.png",
     },
     {
-      title: "partner 1",
-      image: "/src/assets/350x100.svg",
+      title: "Risktec",
+      image: "/src/assets/risktec.png",
     },
   ],
   services: [
@@ -134,36 +153,36 @@ const content: Content = {
   ],
   blogs: [
     {
-      title: "Professional Services",
+      title: "Demo Title",
       id: "professional-services",
       link: "/services#professional-services",
       content:
         "We support our customers execute against their GRC goals, whether they be implementing technology, selecting the best fit technology or outsourcing the management of their GRC system entirely.",
-      image: "../assets/cat.avif?url",
+      image: "/src/assets/dive.jpg",
     },
     {
-      title: "Implementation",
+      title: "Demo Title Alt",
       id: "implementation",
       link: "/services#implementation",
       content:
         "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
-      image: "~/assets/dive.jpg?url",
+      image: "/src/assets/hikers-mountains.jpg",
     },
     {
-      title: "Managed Dog",
+      title: "Demo Blog Title Other",
       id: "managed-services",
       link: "/services#managed-services",
       content:
         "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
-      image: "~/assets/dog.jpg?url",
+      image: "/src/assets/dive.jpg",
     },
     {
-      title: "Managed Services",
-      id: "managed-services",
-      link: "/services#managed-services",
+      title: "Demo Title Alt",
+      id: "implementation",
+      link: "/services#implementation",
       content:
-        "Navigating a fast-moving threat and regulatory landscape with a dynamic GRC programme is a challenge.",
-      image: "~/assets/dog.jpg?url",
+        "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
+      image: "/src/assets/hikers-mountains.jpg",
     },
   ],
   about: {
@@ -195,22 +214,22 @@ const content: Content = {
     team: [
       {
         title: "Homer Simpson",
-        image: "~/assets/person-3.jpg",
+        image: "/src/assets/person-3.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur apdipiscing elit",
       },
       {
         title: "Homer Simpson",
-        image: "~/assets/person-3.jpg",
+        image: "/src/assets/person-3.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur apdipiscing elit",
       },
       {
         title: "Homer Simpson",
-        image: "~/assets/person-3.jpg",
+        image: "/src/assets/person-3.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur apdipiscing elit",
       },
       {
         title: "Homer Simpson",
-        image: "~/assets/person-3.jpg",
+        image: "/src/assets/person-3.jpg",
         content: "Lorem ipsum dolor sit amet, consectetur apdipiscing elit",
       },
     ],

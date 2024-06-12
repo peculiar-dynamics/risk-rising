@@ -5,6 +5,7 @@ import Heading from "~/components/common/Heading.astro";
 export interface Props {
   icon?: string;
 	title?: string;
+  titleColor?:string;
 	subtitle?: string,
   subtitleOrder?:string;
   id?:string;
@@ -20,6 +21,7 @@ const {
   subtitle,
   subtitleOrder,
   title,
+  titleColor,
   center,
   id,
   addClasses = "w-full",
@@ -47,7 +49,7 @@ const centering = center
   )}
   {title && ( 
     <h1
-      class="heading relative max-w-[40ch] font-serif-heading font-semibold capitalize"
+      class:list={["heading relative max-w-[40ch] font-semibold uppercase", titleColor]}
     >
       {
         id ? (

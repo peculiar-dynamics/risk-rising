@@ -8,10 +8,11 @@ export default {
         handwritten: [
           `"Qwitcher Grypen"`,
           "cursive",
-          ...defaultTheme.fontFamily.sans,
+          ...defaultTheme.fontFamily.serif,
         ],
-        "serif-heading": ["Mate", "serif", ...defaultTheme.fontFamily.sans],
-        subtitle: ["Comfortaa", "sans-serif", ...defaultTheme.fontFamily.sans],
+        title: ["Almarai", "sans-serif", ...defaultTheme.fontFamily.sans],
+        subtitle: ["Montserrat", "sans-serif", ...defaultTheme.fontFamily.sans],
+        sans: ["Hind", "sans-serif", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         onSurface: "rgb(var(--onSurfaceTW)/<alpha-value>)",

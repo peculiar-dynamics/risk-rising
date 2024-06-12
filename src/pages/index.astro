@@ -13,30 +13,29 @@ import Signup from "~/components/sections/Signup.astro"
 
 import content from "~/data/content"
 
-import bannerImg from "~/assets/350x100.svg"
+import bannerImg from "~/assets/hikers-mountains.jpg"
 
 
 const services = content.services.filter((s)=> s.intro)
-const featureColors=["primaryFill", "primaryContainer", "primaryFixed"]
+const featureColors=["primaryFill text-primary-950 dark:text-primary-200", "primaryContainer", "primaryFixed"]
 
 const title="Home title"
 const description = "Home desc"
 
 const items = content.partners
-
+const hero = content.hero
 ---
 
 
 <BaseLayout {title} {description} >
-	<Hero title="Simplify. Standardise. Optimise." scroll image background="gradient" link="#intro" />
+	<Hero {hero} scroll image background="gradient" link="#intro"/>
 	<Banner text="Our Ecosystem of Clients, Partners and Vendors" {items} />
 	<IntroBanner
 		title="Governance, Risk & Compliance Specialists"
 		subtitle="who we are"
 		id="intro"
-		signature="Bob Loblaw"
-		signatureName="Bob Loblaw, MD"
 		bannerUrl={bannerImg}
+		bg="bg-[--secondaryContainer] "
 	>
 
 		<p class="font-bold md:text-left text-center w-full">
@@ -70,7 +69,7 @@ const items = content.partners
 			text="More Services"
 			type="filled"
 			buttonColor=""
-			icon="mdi:google"
+			
 			slot="buttons"
 
 			/>
@@ -80,7 +79,7 @@ const items = content.partners
 			type="outlined"
 			buttonColor=""
 			slot="buttons"
-			icon="mdi:google"
+			
 
 			iconLeft
 
@@ -96,7 +95,7 @@ const items = content.partners
 
 	</ContentSplit>
 
-	<ContentGallery subtitle="News and resources" title="The latest in industry and in-house" items={content.blogs} gallery="cards">
+	<ContentGallery subtitle="News and resources" title="The latest in industry and in-house" items={content.blogs} gallery="cards" sectionbg="my-16 bg-[--secondaryContainer]">
 		<Button
 		href="/news"
 		text="Read More News"
@@ -108,6 +107,6 @@ const items = content.partners
 		/>
 	</ContentGallery>
 
-	<Signup />
+	<Signup sectionbg="bg-[--primaryContainer]" />
 
 </BaseLayout>

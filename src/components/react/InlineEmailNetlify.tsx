@@ -67,7 +67,7 @@ export default function InlineEmailNetlify() {
         </label>
       </p>
 
-      <div className=" flex flex-col w-full  justify-center gap-2 sm:flex-row flex-wrap md:gap-3">
+      <div className=" flex flex-col w-full items-center  justify-center gap-2 sm:flex-row flex-wrap md:gap-3">
         <div className="relative  flex w-full sm:w-60 max-w-96 flex-auto flex-wrap items-center justify-center">
           <label htmlFor="signup-email" className="sr-only">
             Email Address
@@ -97,7 +97,7 @@ export default function InlineEmailNetlify() {
 
         <button
           type="submit"
-          className={`button  ${
+          className={`button py-2 px-6  ${
             isSubmitSuccessful ? "disabled" : "elevated"
           }  `}
           aria-live="assertive"
