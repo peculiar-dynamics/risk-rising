@@ -1,47 +1,112 @@
-# Astro Starter Kit: Minimal
+# Risk Rising Website Readme
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This readme provides an overview of the [Risk Rising](https://www.riskrising.com/) website built for Risk Rising.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Project Details
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Website Name: [https://www.riskrising.com/](https://www.riskrising.com/)
+- Client Name: Risk Rising
+- Launch Date (Optional): [Launch Date] (if applicable)
 
-## 🚀 Project Structure
+### Ongoing Services
 
-Inside of your Astro project, you'll see the following folders and files:
+- Hosting Plan: [standard/ comprehensive]
+  - Renewal Date: [Date]
+- Other Service
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+  - Renewal Date
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+  ## Domain & Hosting
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Registrar: [Registrar] (e.g. Porkbun)
+  - Login URL: [Login url]
+  - Domain Renewal Date: [Date]
+  - Alias Domains (CNAMEs):
+    - [url] : [Renewal Date]
+- Hosting Provider: [provider] (e.g. netlify, Google Cloud)
+  - Control Panel URL: (Client Control Panel)[]
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Name Servers
 
-## 🧞 Commands
+| Type | Name | Priority | Content | TTL | Primary NS | Responsible Email |
+| :--- | :--- | :------- | :------ | :-- | :--------- | :---------------- |
+| A    | name | priority | content | ttl | [y/n]      | [email]           |
 
-All commands are run from the root of the project, from a terminal:
+### Email Hosting
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Email Hosting Provider: [Email Hosting Provider Name] (if separate from website hosting)
+  - Login URL: [Login URL for Email Hosting]
+  - Username (securely stored): Contact developer for login information. (Do not store password in readme!)
+- Email Accounts:
+  - [email address]: [renewal date]
 
-## 👀 Want to learn more?
+## Website Functionality and Features
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Key Features:
+  - List 1: Feature description
+  - List 2: Feature description
+  - List 3: Feature description
+- Add Ons Purchased
+  - [CMS/ feature/ functionality]
+
+### CMS
+
+- Content Management System (CMS): [Decap]()
+  - Login URL: [Login URL]
+  - Admin Username (securely stored): Contact developer for login information. (Do not store password in readme!)
+  - Users with accounts:
+    - [User Name] : [User Email]
+
+### Analytics & Tracking
+
+- Analytics Platform: [Analytics Platform Name] (e.g., Google Analytics)
+  - Property ID: (Provide ID if appropriate to share with client)
+  - Cookies Config: (any specific cookie implications)
+- Reporting Dashboards:
+  - Search Console
+
+## Technology Stack (Optional)
+
+Languages/Frameworks/Libraries: (List specific technologies used)
+
+- Built with Astro
+- Tailwind css
+
+### Test Performance
+
+Lighthouse Score:
+![Screenshot of Lighthouse Score](url)
+
+## Brand & Content
+
+- Client Manual (link if applicable): [Link to Client Manual]
+- Style Guide (link if applicable): [Link to Style Guide]
+- Logo Files: [link]
+
+### Image Licenses
+
+- Stock Photo Service (if applicable): [Stock Photo Service Name] (e.g., Adobe Stock, Unsplash)
+  - License Information: Briefly describe the license type used for stock photos (e.g., Royalty-free)
+
+## Socials & Search
+
+### Google Business Profile
+
+- Google Business Profile Link: [Link to Google Business Profile]
+- Search Console Link: [Link]
+
+### Social Media Profiles
+
+List Social Media Profiles:
+
+- Facebook: [Link to Facebook Page]
+- Twitter: [Link to Twitter Profile]
+- Instagram: [Link to Instagram Profile]
+- LinkedIn
+- (Include additional profiles as needed)
+
+## Additional Notes
+
+- Specific Instructions: (Mention any specific instructions for client)
+- Contact Information: - For website related issues, please contact Lucy at lucy@peculiardynamics.co.uk or [Other preferred method of contact].
+  Please Note: Sensitive information like login credentials are stored securely and not within this readme file.
