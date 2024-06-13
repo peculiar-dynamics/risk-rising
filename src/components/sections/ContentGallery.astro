@@ -24,7 +24,7 @@ const colorsRept = Array((items.length % featureColors.length)+1).fill(featureCo
 
 ---
 <section class:list={["w-full  flex items-center justify-center", sectionbg]}>
-    <div class:list={["container  flex flex-col md:flex-row md:flex-wrap  items-center justify-center md:justify-between p-4 sm:py-8 sm:px-6 md:px-8 gap-8 ", divbg]}>
+    <div class:list={["container  flex flex-col md:flex-row md:flex-wrap  items-center justify-center md:justify-between  gap-8 ", divbg || "p-4  sm:py-8 sm:px-6 md:px-8"]}>
         
         <SectionHeading addClasses="md:w-1/2 " {...heading}>
             <slot name="heading" />
@@ -45,9 +45,9 @@ const colorsRept = Array((items.length % featureColors.length)+1).fill(featureCo
     )}
 
     { gallery ==="features" && (
-        <div class:list={["flex flex-row justify-center items-stretch flex-wrap md:flex-nowrap  gap-4  max-w-screen-2xl  w-full"]}>
+        <div class:list={["flex flex-row justify-center  flex-wrap lg:flex-nowrap  gap-4  max-w-screen-2xl  w-full"]}>
             {items.map((item:any, index:any) => (
-                <Feature icon={item.icon} title={item.title} content={item.content} link={item.link} bg={contentbg || colorsRept[index]}  />
+                <Feature icon={item.icon} title={item.title} content={item.content} link={item.link} bg={contentbg || colorsRept[index]}   />
             ))}
         </div>
     )}

@@ -4,7 +4,7 @@ const { icon, iconSize,  title, link, bg, content,  addClasses} = Astro.props
 
 
 ---
-<article class:list={["feature group flex flex-col gap-2 py-4 shrink max-w-[60ch] w-full grow rounded-sm p-2", {"cursor-pointer hover:shadow-lg focus-within:shadow-lg": link}, bg , addClasses]}>
+<article class:list={["feature group flex flex-col gap-2 py-4 max-w-[60ch]  rounded-sm p-2", {"cursor-pointer hover:shadow-lg focus-within:shadow-lg": link}, bg , addClasses || "w-full"]}>
 
     <h2 class="px-2 sm:px-4 w-full uppercase pt-6 no-underline flex flex-col gap-2">
       {title}
