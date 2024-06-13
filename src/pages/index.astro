@@ -16,8 +16,9 @@ import content from "~/data/content"
 import bannerImg from "~/assets/hikers-mountains.jpg"
 
 
-const services = content.services.filter((s)=> s.intro)
+const services = content.services.details.filter((s)=> s.intro)
 const featureColors=["primaryFill text-primary-950 dark:text-primary-200", "primaryContainer", "primaryFixed"]
+
 
 const title="Home title"
 const description = "Home desc"
@@ -35,7 +36,7 @@ const hero = content.hero
 		subtitle="who we are"
 		id="intro"
 		bannerUrl={bannerImg}
-		bg="bg-[--secondaryContainer] "
+		bg="bg-[--primaryContainer] "
 	>
 
 		<p class="font-bold md:text-left text-center w-full">

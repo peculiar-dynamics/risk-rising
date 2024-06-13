@@ -1,0 +1,28 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+import Button from "~/components/common/Button.astro";
+---
+
+<BaseLayout title="Page Not Found">
+  <section
+    class="flex min-h-full grow flex-col items-center justify-center gap-4"
+  >
+    <Icon name="mdi:error" class="text-6xl text-[--error]" />
+    <h1 class="text-6xl title">404 </h1>
+    <p class="text-2xl  tracking-tight sm:text-4xl">
+      Page not found
+    </p>
+    <p class="text-center text-lg max-w-[60ch] text-pretty">
+      The page you are looking for might have been removed, had its name
+      changed, or is temporarily unavailable.
+    </p>
+
+    <Button
+      href="/"
+      text="Return to Home"
+      buttonColor="color-neutral "
+      addClasses="w-fit mt-8"
+    />
+  </section>
+</BaseLayout>

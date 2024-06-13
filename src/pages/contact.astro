@@ -18,10 +18,10 @@ const description = "Contact description"
         <ContentSplit title="" subtitle="Get In Touch" id="contact" addClasses="h-full ">
                 <Fragment slot="heading">
         
-                    <Feature title="Email Us" bg="bg-[--primaryFixed]">
+                    <Feature title="Email Us" bg="primaryFill text-primary-950 dark:text-primary-200">
                         <InlineEmail />
                     </Feature>
-                    <Feature title="Find us Online" bg="bg-[--primaryFixed]">
+                    <Feature title="Find us Online" bg="primaryFill text-primary-950 dark:text-primary-200">
                         <Socials/>
                     </Feature>
                 
@@ -31,7 +31,7 @@ const description = "Contact description"
             <div class="flex h-full max-w-lg w-full flex-none flex-col  items-center justify-center bg-[--primaryContainer] p-4 shadow sm:p-6 lg:max-w-5xl lg:p-8 lg:py-14">
                 <p
                 aria-roledescription="subtitle"
-                class="font-subtitle text-base font-semibold uppercase text-[--onPrimary] text-left w-full mb-8">
+                class="font-subtitle text-base font-semibold uppercase text-[--onPrimaryContainer] text-left w-full mb-8">
                     Send us a message
                 </p>
                 <ContactMessageNetlify client:only="react" />

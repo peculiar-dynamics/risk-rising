@@ -10,6 +10,7 @@ export type Feature = {
   content?: string;
   intro?: boolean;
   icon?: string;
+  link?: string;
 };
 export type Card = {
   title: string;
@@ -49,7 +50,14 @@ export type Content = {
     background: string;
   };
   partners: Partner[];
-  services: Feature[];
+  services: {
+    page: {
+      title: string;
+      subtitle: string;
+      callOut: string;
+    };
+    details: Feature[];
+  };
   blogs: Card[];
   about: {
     mission: string;
@@ -111,7 +119,7 @@ const content: Content = {
       title: "Panorays",
       image: "/src/assets/panorays.png",
       content:
-        "Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit. Lorem ipsum dolor sit amet, consectetur apdipiscing elit.",
+        "We support our customers execute against their GRC goals, whether they be implementing technology, selecting the best fit technology or outsourcing the management of their GRC system entirely. ",
     },
     {
       title: "Logicgate",
@@ -128,29 +136,40 @@ const content: Content = {
       image: "/src/assets/risktec.png",
     },
   ],
-  services: [
-    {
-      title: "Professional Services",
-      id: "professional-services",
-      content:
-        "We support our customers execute against their GRC goals, whether they be implementing technology, selecting the best fit technology or outsourcing the management of their GRC system entirely.",
-      intro: true,
+  services: {
+    page: {
+      title: "Best-in-class technology & expertise",
+      subtitle: "How we help",
+      callOut:
+        "Navigating a fast-moving threat and regulatory landscape with a dynamic GRC programme is a challenge.<br/><br/>Risk Rising helps its customers identify the best fit technology solutions, successfully executes implementations and integrations of those solutions, and provides the appropriate level of aftercare support.",
     },
-    {
-      title: "Implementation",
-      id: "implementation",
-      content:
-        "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
-      intro: true,
-    },
-    {
-      title: "Managed Services",
-      id: "managed-services",
-      content:
-        "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
-      intro: true,
-    },
-  ],
+    details: [
+      {
+        title: "Professional Services",
+        id: "professional-services",
+        content:
+          "We support our customers execute against their GRC goals, whether they be implementing technology, selecting the best fit technology or outsourcing the management of their GRC system entirely.",
+        intro: true,
+        link: "/services#professional-services",
+      },
+      {
+        title: "Implementation",
+        id: "implementation",
+        content:
+          "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
+        intro: true,
+        link: "/services#implementation",
+      },
+      {
+        title: "Managed Services",
+        id: "managed-services",
+        content:
+          "Our team are market experts with decades of experience covering sales, technical validation and implementation making us a trusted authority within the industry.",
+        intro: true,
+        link: "/services#managed-services",
+      },
+    ],
+  },
   blogs: [
     {
       title: "Demo Title",

@@ -1,0 +1,123 @@
+---
+import { Image } from "astro:assets"
+import BaseLayout from "~/layouts/BaseLayout.astro"
+import PageHeader from "~/components/sections/PageHeader.astro"
+import CallOut from "~/components/sections/CallOut.astro"
+import ContentGallery from "~/components/sections/ContentGallery.astro"
+import ContentSplit from "~/components/sections/ContentSplit.astro"
+
+import Card from "~/components/common/Card.astro"
+import Button from "~/components/common/Button.astro"
+
+import content from "~/data/content"
+
+const title = "Services"
+const description = "Services description"
+
+const services = content.services
+
+const partners = content.partners.slice(0,3)
+const sectionTitle = services.page.title
+const callOut = services.page.callOut
+const subtitle=services.page.subtitle
+
+import featureimg from "~/assets/dive.jpg"
+import featureimg2 from "~/assets/hikers-mountains.jpg"
+import featureimg3 from "~/assets/mountain.jpg"
+
+---
+
+<BaseLayout {title} {description} header="transparent">
+    <PageHeader {title} gradient/>
+    <CallOut subtitle={sectionTitle} title={subtitle} button sectionbg="md:px-16 mt-4 md:mt-8 lg:mt-16">
+        <Fragment slot="content" >
+            <div  class=" max-w-[60ch]  text-[--onSurface]" set:html={callOut}></div>
+                
+        </Fragment>
+    </CallOut>
+    <ContentGallery  items={content.services.details} gallery="features"/>
+
+
+    <ContentSplit subtitle="service subtitle" title={content.services.details[0].title} subtitle="Our Partners" id={content.services.details[0].id} sectionbg="my-4 md:my-8 lg:my-16 px-4 md:px-8" divbg="bg-primary-950 dark:bg-primary-100 text-[--primary] max-w-screen-xl" titleColor="text-[--primaryFixedDim]" subtitleColor="text-[--primary]">
+		<Fragment slot="heading">
+			<div class="md:text-left text-center prose dark:prose-invert">
+				<p>Congue eu consequat ac felis donec et odio. Turpis in eu mi bibendum neque egestas congue quisque. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. </p>
+
+				<ol>
+					<li>Non odio euismod lacinia at quis risus sed vulputate odio. Mi proin sed libero enim sed faucibus turpis.</li>
+					<li>Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse.</li>
+					<li>Amet nulla facilisi morbi tempus iaculis urna. Magna sit amet purus gravida quis blandit turpis.</li>
+				</ol>
+			</div>
+		</Fragment>
+
+		<Button
+		href="/contact"
+		text="Learn More"
+		type="filled"
+		addClasses="w-fit"
+		slot="buttons"
+
+		/>
+
+		<div class="flex h-2/3 ">
+			<Image src={featureimg3} alt="" class="object-cover object-center"/>
+		</div>
+
+	</ContentSplit>
+	<ContentSplit subtitle="service subtitle" title={content.services.details[1].title} subtitle="Our Partners" id={content.services.details[1].id} sectionbg="bg-[--primary] text-[--onPrimary]" titleColor="text-[--inversePrimary]" subtitleColor="text-[--onPrimary]">
+		<Fragment slot="heading">
+			<div class="md:text-left text-center prose-invert dark:prose">
+				<p>Congue eu consequat ac felis donec et odio. Turpis in eu mi bibendum neque egestas congue quisque. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. </p>
+
+				<ol>
+					<li>Non odio euismod lacinia at quis risus sed vulputate odio. Mi proin sed libero enim sed faucibus turpis.</li>
+					<li>Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse.</li>
+					<li>Amet nulla facilisi morbi tempus iaculis urna. Magna sit amet purus gravida quis blandit turpis.</li>
+				</ol>
+			</div>
+		</Fragment>
+
+		<Button
+		href="/contact"
+		text="Learn More"
+		type="tonal"
+		addClasses="w-fit"
+		slot="buttons"
+
+		/>
+
+		<div class="flex  ">
+			<Image src={featureimg} alt="" class="object-cover object-center"/>
+		</div>
+
+	</ContentSplit>
+	<ContentSplit subtitle="service subtitle" title={content.services.details[2].title} subtitle="Our Partners" id={content.services.details[2].id} sectionbg="my-4 md:my-8 lg:my-16 px-4 md:px-8" divbg="bg-primary-950 dark:bg-primary-100 text-[--primary] max-w-screen-xl" titleColor="text-[--primaryFixedDim]" subtitleColor="text-[--primary]">
+		<Fragment slot="heading">
+			<div class="md:text-left text-center prose dark:prose-invert">
+				<p>Congue eu consequat ac felis donec et odio. Turpis in eu mi bibendum neque egestas congue quisque. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. </p>
+
+				<ol>
+					<li>Non odio euismod lacinia at quis risus sed vulputate odio. Mi proin sed libero enim sed faucibus turpis.</li>
+					<li>Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse.</li>
+					<li>Amet nulla facilisi morbi tempus iaculis urna. Magna sit amet purus gravida quis blandit turpis.</li>
+				</ol>
+			</div>
+		</Fragment>
+
+		<Button
+		href="/contact"
+		text="Learn More"
+		type="filled"
+		addClasses="w-fit"
+		slot="buttons"
+
+		/>
+
+		<div class="flex  ">
+			<Image src={featureimg2} alt="" class="object-cover object-center"/>
+		</div>
+
+	</ContentSplit>
+
+</BaseLayout>

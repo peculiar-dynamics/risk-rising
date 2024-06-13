@@ -68,15 +68,11 @@ export default function InlineEmailNetlify() {
       </p>
 
       <div className=" flex flex-col w-full items-center  justify-center gap-2 sm:flex-row flex-wrap md:gap-3">
-        <div className="relative  flex w-full sm:w-60 max-w-96 flex-auto flex-wrap items-center justify-center">
+        <div className="outline-input">
           <label htmlFor="signup-email" className="sr-only">
             Email Address
           </label>
-          <Icon
-            icon="mdi:email"
-            className="pointer-events-none absolute inset-y-0 left-0 h-full  pl-3 text-3xl text-[--font-color]"
-            aria-hidden="true"
-          />
+          <Icon icon="mdi:email" className="" aria-hidden="true" />
 
           <input
             {...register("email", {
@@ -88,7 +84,7 @@ export default function InlineEmailNetlify() {
             })}
             aria-invalid={errors.email ? "true" : "false"}
             placeholder="Enter your email"
-            className="block w-full rounded-lg border-[--outline] bg-[--surface-container-lowest] px-4 py-3 pl-10 text-sm disabled:pointer-events-none disabled:opacity-50"
+            className=""
             autoComplete="email"
             disabled={isSubmitting || isSubmitSuccessful}
             id="signup-email"
@@ -97,7 +93,7 @@ export default function InlineEmailNetlify() {
 
         <button
           type="submit"
-          className={`button py-2 px-6  ${
+          className={`button whitespace-nowrap flex justify-center items-center py-2 px-4 align-middle ${
             isSubmitSuccessful ? "disabled" : "elevated"
           }  `}
           aria-live="assertive"
@@ -124,9 +120,9 @@ export default function InlineEmailNetlify() {
               Subscribe
             </span>
           ) : isSubmitSuccessful ? (
-            <span className="btnSubmit-text">Success!</span>
+            <span className="btnSubmit-text px-2">Success!</span>
           ) : (
-            <span className="btnSubmit-text">Subscribe</span>
+            <span className="btnSubmit-text  px-2 ">Subscribe</span>
           )}
           <span
             className="js-loadingMsg sr-only"
@@ -136,7 +132,7 @@ export default function InlineEmailNetlify() {
       </div>
       <p
         aria-live="assertive"
-        className="absolute -top-8 mt-2 w-full text-xs font-medium text-[--error]"
+        className="absolute -top-8 mt-2 w-full text-xs px-2 font-medium text-[--error]"
       >
         {errors.email?.message}
       </p>

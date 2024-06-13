@@ -20,14 +20,13 @@ const partners = content.partners.slice(0,3)
     <PageHeader {title} gradient/>
     <CallOut title="Our mission">
         <Fragment slot="content" >
-            <p  class="font-semibold max-w-[40ch] capitalize text-xl md:text-2xl text-[--onSurface]">
+            <p  class=" max-w-[40ch] capitalize text-xl md:text-2xl text-[--onSurface]">
                 "DELIVER <strong>CLARITY</strong> ON COMPLEX GRC PROBLEMS TO OUR CUSTOMERS THROUGH AN ECOSYSTEM OF <strong>BEST-IN-CLASS TECHNOLOGY</strong> AND EXPERTISE"
             </p>
         </Fragment>
     </CallOut>
-    <ContentGallery subtitle="What we stand for" title="Our Values" items={content.about.features} gallery="features"/>
+    <ContentGallery subtitle="What we stand for" title="Our Values" items={content.about.features} gallery="features" sectionbg="my-4 md:my-8 lg:my-16" divbg="bg-primary-950 dark:bg-primary-100" contentbg="primaryContainer"/>
 
-    <ContentGallery subtitle="Our Team" title="Or Testimonials" items={content.about.team} gallery="cards"/>
 
     <ContentSplit title="Building Relationships" subtitle="Our Partners" id="partners" sectionbg="bg-[--primary] text-[--onPrimary]" titleColor="text-[--onPrimary]">
 		<Fragment slot="heading">
@@ -40,8 +39,8 @@ const partners = content.partners.slice(0,3)
 		</Fragment>
 
 		<Button
-		href="/services"
-		text="Partner Services"
+		href="/contact"
+		text="Learn More"
 		type="tonal"
 		addClasses="w-fit"
 		slot="buttons"

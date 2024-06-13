@@ -1,6 +1,8 @@
 ---
 import { Icon } from "astro-icon/components";
-const {icon, iconSize,  title, link, bg, content,  addClasses} = Astro.props
+const { icon, iconSize,  title, link, bg, content,  addClasses} = Astro.props
+
+
 ---
 <article class:list={["feature group flex flex-col gap-2 py-4 shrink max-w-[60ch] w-full grow rounded-sm p-2", {"cursor-pointer hover:shadow-lg focus-within:shadow-lg": link}, bg , addClasses]}>
 
@@ -23,7 +25,7 @@ const {icon, iconSize,  title, link, bg, content,  addClasses} = Astro.props
         link && (
             <a
             href={link}
-            class:list={["text-btn ml-1 pl-3 pr-2 text-base group-hover:underline focus:no-underline " ]}
+            class:list={["text-btn ml-1 mt-auto pl-3 pr-2 text-base group-hover:underline focus:no-underline " ]}
             >
             <span class="">read more</span>
             <Icon

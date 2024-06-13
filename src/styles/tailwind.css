@@ -35,13 +35,19 @@
     }
   }
 
-  /* Set core body defaults */
+  /* Set core body defaults with accessible line height and improved text rendering */
   body {
     min-height: 100svh;
     line-height: 1.5;
-
+    -webkit-font-smoothing: antialiased;
     /* height: 4000px; */
     /* @apply border-2 border-green-300; */
+  }
+
+  /* Remove default margin in favour of better control in authored CSS */
+
+  * {
+    margin: 0;
   }
 
   /* Set shorter line heights on headings and interactive elements */
@@ -49,8 +55,8 @@
   h2,
   h3,
   h4,
-  button,
   input,
+  button,
   label {
     line-height: 1.1;
   }
@@ -73,6 +79,17 @@
     @apply text-lg md:text-xl;
   }
 
+  /* Avoid text overflows */
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
   /* hide elements labelled hidden */
   [hidden] {
     display: none !important;
@@ -81,6 +98,12 @@
   [tabindex="-1"] {
     outline: none !important;
     box-shadow: none !important;
+  }
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
   }
 
   /* A elements that don't have a class get default styles */
@@ -103,6 +126,16 @@
   button {
     text-decoration: none;
     transition: color 0.15s ease-in-out;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    /* // color: inherit;
+    // letter-spacing: inherit; */
+    font: inherit;
   }
   /* scrollbar */
   * {
@@ -139,6 +172,8 @@
   .primaryFill {
     @apply bg-[--primary] text-[--onPrimary];
   }
+  .card.primaryFill > h2,
+  .card.primaryFill > .text-btn,
   .feature.primaryFill > h2,
   .feature.primaryFill > .text-btn {
     @apply text-[--onPrimary];
@@ -150,6 +185,10 @@
   .primaryFixed {
     @apply bg-[--primaryFixedDim] dark:bg-[--primaryFixed] text-[--onPrimaryFixed];
   }
+  .card.primaryFixed > h2,
+  .feature.primaryFixed > h2 {
+    @apply dark:text-[--onPrimary];
+  }
 
   [data-icon] {
     /* color: var(--onSurface); */
@@ -157,6 +196,9 @@
 
   .subtitle {
     @apply font-subtitle text-base font-semibold uppercase text-[--primary];
+  }
+  .title {
+    @apply font-title uppercase text-primary-250 dark:text-primary-600;
   }
 
   .before-gradient {

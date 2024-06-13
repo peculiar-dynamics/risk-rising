@@ -134,20 +134,6 @@ const siteInfo: SiteInfo = {
     {
       key: "Services",
       href: "/services/",
-      children: [
-        {
-          key: "Overview",
-          href: "/services/",
-        },
-        {
-          key: "Service 1",
-          href: "/services/service1/",
-        },
-        {
-          key: "Service 2",
-          href: "/services/service2/",
-        },
-      ],
     },
     {
       key: "News",

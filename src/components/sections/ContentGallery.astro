@@ -9,16 +9,23 @@ export interface Props {
     image?: string;
     divbg?: string;
     sectionbg?: string;
+    contentbg?: string;
     items?: any;
     subtitle?: string;
     title?:string;
     url?: string;
 }
 
-const { image,  divbg, sectionbg, items, gallery="cards", url,  ...heading } = Astro.props;
+const { image,  divbg, sectionbg, contentbg, items, gallery="cards", url,  ...heading } = Astro.props;
+
+const featureColors=["primaryFill text-primary-950 dark:text-primary-200", "primaryContainer", "primaryFixed"]
+const colorsRept = Array((items.length % featureColors.length)+1).fill(featureColors).flat()
+
+
 ---
 <section class:list={["w-full  flex items-center justify-center", sectionbg]}>
     <div class:list={["container  flex flex-col md:flex-row md:flex-wrap  items-center justify-center md:justify-between p-4 sm:py-8 sm:px-6 md:px-8 gap-8 ", divbg]}>
+        
         <SectionHeading addClasses="md:w-1/2 " {...heading}>
             <slot name="heading" />
         </SectionHeading>
@@ -31,16 +38,16 @@ const { image,  divbg, sectionbg, items, gallery="cards", url,  ...heading } = A
         }
     {gallery === "cards" &&(
         <div class:list={["grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center  gap-4  max-w-screen-2xl  w-full"]}>
-            { items.map((item:any) => (
-                <Card title={item.title} content={item.content} link={item.link} image={item.image} />
+            { items.map((item:any, index: any) => (
+                <Card title={item.title} content={item.content} link={item.link} image={item.image} addClasses={contentbg || colorsRept[index]}/>
             ))}
         </div>
     )}
 
     { gallery ==="features" && (
         <div class:list={["flex flex-row justify-center items-stretch flex-wrap md:flex-nowrap  gap-4  max-w-screen-2xl  w-full"]}>
-            {items.map((item:any) => (
-                <Feature icon={item.icon} title={item.title} content={item.content}  />
+            {items.map((item:any, index:any) => (
+                <Feature icon={item.icon} title={item.title} content={item.content} link={item.link} bg={contentbg || colorsRept[index]}  />
             ))}
         </div>
     )}
