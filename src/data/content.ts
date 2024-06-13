@@ -19,6 +19,8 @@ export type Card = {
   image?: string;
   icon?: string;
   link?: string;
+  imageContain?: boolean;
+  images?: any;
 };
 export interface Filter {
   name: string;

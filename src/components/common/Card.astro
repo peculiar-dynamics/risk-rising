@@ -4,9 +4,9 @@ import { getImage } from "astro:assets";
 import { Image } from "astro:assets";
 const {item, image, imageContain, icon, title, link, content, elevated, filled,outlined, addClasses} = Astro.props
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}')
+const images = await import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif,webp}')
 // console.log(images)
-
+const imagePath = image
 // import image from item.image;
 ---
 <article class:list={["card justify-between group flex flex-col gap-2 shrink max-w-xs min-w-fit w-full grow pb-4 ", {"cursor-pointer hover:shadow-lg focus-within:shadow-lg": link}, elevated && "bg-[--surfaceContainerLow] shadow rounded", filled&&"bg-[--surfaceContainerHighest] text-[--onSurface] rounded", outlined && "border border-[--outlineVariant] rounded", addClasses]}>
@@ -20,8 +20,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg
                 <Icon name="mdi:arrow-right" class="text-lg flex-none font-normal" aria-hidden="true" />
         </a>
     )}
+  {images && 
+  (
+  <Image src={images[image]()} alt=""  class:list={["object-center bg-[--surfaceContainerLow] h-12 sm:h-32 lg:h-80 order-first sm:w-full", imageContain && "object-scale-down p-4" , !imageContain&& "object-cover"]} format="webp" />
+  )
+  }
 
-    <Image src={images[image]()} alt=""  class:list={["object-center bg-[--surfaceContainerLow] h-12 sm:h-32 lg:h-80 order-first sm:w-full", imageContain ? "object-scale-down p-4": "object-cover"]} format="webp" />
 </article>
 <script>
   document.addEventListener("astro:page-load", () => {
